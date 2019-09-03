@@ -4,6 +4,8 @@ This project was bootstrapped with [Create Divi Extension](https://github.com/el
 
 <p>This extension includes modules that I reuse in my day to day projects. So instead of building them in the Divi code module, I simply created custom modules for them.</p>
 
+<p>The modules also include React.js components for use in the visual builder.</p>
+
 <p>To date I have included:</p>
 <ul>
   <li>Text Header</li>
