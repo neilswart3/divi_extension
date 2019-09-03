@@ -1,3 +1,5 @@
-import HelloWorld from './HelloWorld/HelloWorld';
+import TextHeader from './TextHeader/TextHeader';
 
-export default [HelloWorld];
+export default [
+    TextHeader,
+];
