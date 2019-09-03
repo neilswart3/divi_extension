@@ -1,10 +1,11 @@
 <?php
 
-class DIVEX_TextHeader extends ET_Builder_Module {
+class DIVEX_ContactDetailsItem extends ET_Builder_Module {
 
-	public $slug       = 'divex_textheader';
+	public $slug       = 'divex_contactdetails_item';
 	public $vb_support = 'on';
 	public $text_domain = 'divex-divi_ex';
+	public $child_title_var = 'heading';
 
 	protected $module_credits = [
 		'module_uri' => 'https://github.com/neilswart3/divi_extension',
@@ -14,7 +15,7 @@ class DIVEX_TextHeader extends ET_Builder_Module {
 
 	public function init() {
 
-		$this->name = esc_html__( 'Text Header', $text_domain );
+		$this->name = esc_html__( 'Contact Details Item', $text_domain );
 
 		$this->settings_modal_toggles = [
 			'general'  => [
@@ -97,4 +98,4 @@ class DIVEX_TextHeader extends ET_Builder_Module {
 	}
 }
 
-new DIVEX_TextHeader;
+new DIVEX_ContactDetailsItem;

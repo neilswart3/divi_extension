@@ -1,10 +1,11 @@
 <?php
 
-class DIVEX_TextHeader extends ET_Builder_Module {
+class DIVEX_ContactDetails extends ET_Builder_Module {
 
-	public $slug       = 'divex_textheader';
+	public $slug       = 'divex_contactdetails';
 	public $vb_support = 'on';
 	public $text_domain = 'divex-divi_ex';
+	public $child_slug = 'divex_contactdetails_item';
 
 	protected $module_credits = [
 		'module_uri' => 'https://github.com/neilswart3/divi_extension',
@@ -12,9 +13,14 @@ class DIVEX_TextHeader extends ET_Builder_Module {
 		'author_uri' => 'https://github.com/neilswart3',
 	];
 
+	/**
+	 * Module properties initialization
+	 *
+	 * @since 1.0.0
+	 */
 	public function init() {
 
-		$this->name = esc_html__( 'Text Header', $text_domain );
+		$this->name = esc_html__( 'Contact Details', $text_domain );
 
 		$this->settings_modal_toggles = [
 			'general'  => [
@@ -55,6 +61,13 @@ class DIVEX_TextHeader extends ET_Builder_Module {
 
 	}
 
+	/**
+	 * Module's specific fields
+	 *
+	 * @since 1.0.0
+	 *
+	 * @return array
+	 */
 	public function get_fields() {
 		
 		return [
@@ -71,10 +84,28 @@ class DIVEX_TextHeader extends ET_Builder_Module {
 		];
 	}
 
+	/**
+	 * Remove wrapper
+	 *
+	 * @param string $output
+	 * @param string $render_slug
+	 * @return string $output
+	 */
 	protected function _render_module_wrapper( $output = '', $render_slug = '' ) {
 		return $output;
 	}
 
+	/**
+	 * Render module output
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param array  $attrs       List of unprocessed attributes
+	 * @param string $content     Content being processed
+	 * @param string $render_slug Slug of module that is used for rendering output
+	 *
+	 * @return string module's rendered output
+	 */
 	public function render( $attrs, $content = null, $render_slug ) {
 
 		$multi_view	= et_pb_multi_view_options( $this );
@@ -97,4 +128,4 @@ class DIVEX_TextHeader extends ET_Builder_Module {
 	}
 }
 
-new DIVEX_TextHeader;
+new DIVEX_ContactDetails;

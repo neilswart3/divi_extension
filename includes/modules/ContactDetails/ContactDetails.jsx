@@ -4,9 +4,9 @@ import React, { Component, Fragment } from 'react';
 // Internal Dependencies
 import './style.css';
 
-class TextHeader extends Component {
+class ContactDetails extends Component {
 
-  static slug = 'divex_textheader';
+  static slug = 'divex_contactdetails';
 
   render() {
     const HeaderTag = `${this.props.header_level}`;
@@ -15,7 +15,7 @@ class TextHeader extends Component {
 
     return (
       <Fragment>
-        <div className="divex_textheader">
+        <div className="divex_contactdetails">
           <HeaderTag className="et_pb_module_header">{header_text}</HeaderTag>
         </div>
       </Fragment>
@@ -24,4 +24,4 @@ class TextHeader extends Component {
 
 }
 
-export default TextHeader;
+export default ContactDetails;
