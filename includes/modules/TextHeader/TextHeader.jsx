@@ -11,12 +11,12 @@ class TextHeader extends Component {
   render() {
     const HeaderTag = `${this.props.header_level}`;
 
-    let header_text = this.props.heading;
+    let headerText = this.props.heading;
 
     return (
       <Fragment>
         <div className="divex_textheader">
-          <HeaderTag className="et_pb_module_header">{header_text}</HeaderTag>
+          <HeaderTag className="et_pb_module_header">{headerText}</HeaderTag>
         </div>
       </Fragment>
     );

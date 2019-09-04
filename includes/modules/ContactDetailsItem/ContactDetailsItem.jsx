@@ -9,15 +9,23 @@ class ContactDetailsItem extends Component {
   static slug = 'divex_contactdetails_item';
 
   render() {
-    const HeaderTag = `${this.props.header_level}`;
 
-    let header_text = this.props.heading;
+    const utils = window.ET_Builder.API.Utils;
+
+    let text = this.props.text;
+    let fontIcon = utils.processFontIcon(this.props.font_icon);
+    let iconColor = this.props.icon_color;
+    let iconStyle = { color: iconColor };
+    let url = this.props.url;
 
     return (
       <Fragment>
-        <div className="divex_contactdetails_item">
-          <HeaderTag className="et_pb_module_header">{header_text}</HeaderTag>
-        </div>
+        <li className="divex_contactdetails_item">
+          <a href={url}>
+            <span className="et-pb-icon" style={iconStyle}>{fontIcon}</span>
+            <span>{text}</span>
+          </a>
+        </li>
       </Fragment>
     );
   }

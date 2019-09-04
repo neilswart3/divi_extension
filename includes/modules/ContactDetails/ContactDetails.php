@@ -120,10 +120,13 @@ class DIVEX_ContactDetails extends ET_Builder_Module {
 		return sprintf( '
 			<div %2$s class="%3$s">
 				%1$s
+				<ul class="%4$s">%5$s</ul>
 			</div>',
 			$heading,
 			$this->module_id(),
-			$this->module_classname()
+			$this->module_classname(),
+			$this->slug . '_inner',
+			et_sanitized_previously( $this->content )
 		);
 	}
 }

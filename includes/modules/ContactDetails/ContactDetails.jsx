@@ -11,12 +11,14 @@ class ContactDetails extends Component {
   render() {
     const HeaderTag = `${this.props.header_level}`;
 
-    let header_text = this.props.heading;
+    let headerText = this.props.heading;
+    let content = this.props.content;
 
     return (
       <Fragment>
         <div className="divex_contactdetails">
-          <HeaderTag className="et_pb_module_header">{header_text}</HeaderTag>
+          <HeaderTag className="et_pb_module_header">{headerText}</HeaderTag>
+          <ul className="divex_contactdetails_inner">{content}</ul>
         </div>
       </Fragment>
     );
