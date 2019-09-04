@@ -9,6 +9,7 @@ This project was bootstrapped with [Create Divi Extension](https://github.com/el
 <p>To date I have included:</p>
 <ul>
   <li>Text Header</li>
+  <li>Contact Items module</li>
 </ul>
 
 <p>Coming soon</p>
