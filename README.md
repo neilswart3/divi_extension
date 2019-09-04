@@ -14,7 +14,6 @@ This project was bootstrapped with [Create Divi Extension](https://github.com/el
 
 <p>Coming soon</p>
 <ul>
-  <li>Contact Items module</li>
   <li>Contact form 7 embedder</li>
   <li>Blurb with button</li>
 </ul>
